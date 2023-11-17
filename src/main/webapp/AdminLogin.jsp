@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
     <%@ include file="Bootstrap.jsp" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +26,12 @@
 				<div class="card-body">
 					<p class="fs-4 text-center">Admin Login</p>
 					
-					<form action="" method="post">
+		<c:if test="${not empty failMessage}">
+			<p class="text-center text-danger">${failMessage}</p>
+			<c:remove var="failMessage" scope="session"/>
+		</c:if>			
+					
+					<form action="adminLogin" method="post">
   <div class="mb-3 ">
     <label for="Email1" class="form-label">Email address</label>
     <input type="email" name="email" class="form-control" id="Email1" required>
