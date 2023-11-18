@@ -19,24 +19,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="home.jsp">Home</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="#">Doctor</a>
+          <a class="nav-link active" aria-current="page" href="doctor.jsp">Doctor</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Patient</a>
+          <a class="nav-link active" href="patitent.jsp">Patient</a>
         </li>
         
       </ul>
       <form class="d-flex">
       <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Admin
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Admin</a></li>
-    <li><a class="dropdown-item" href="#">Logout</a></li>
+    <!-- <li><a class="dropdown-item" href="">Admin</a></li> -->
+    <li><a class="dropdown-item" href="../adminLogout">Logout</a></li>
     
   </ul>
 </div>

@@ -29,6 +29,10 @@
 		<c:if test="${not empty failMessage}">
 			<p class="text-center text-danger">${failMessage}</p>
 			<c:remove var="failMessage" scope="session"/>
+		</c:if>	
+		<c:if test="${not empty succMsg}">
+			<p class="text-center text-danger">${succMsg}</p>
+			<c:remove var="succMsg" scope="session"/>
 		</c:if>			
 					
 					<form action="adminLogin" method="post">

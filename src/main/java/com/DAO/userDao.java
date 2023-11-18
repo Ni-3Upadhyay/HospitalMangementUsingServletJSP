@@ -2,8 +2,10 @@ package com.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import com.Entity.User;
+import com.mysql.cj.xdevapi.Result;
 
 public class userDao {
 	
@@ -38,6 +40,39 @@ public class userDao {
 		}
 		
 		return f;
+	}
+	
+	public User login(String email, String password) {
+		
+		User user= null;
+		try {
+			String sql="select * from user where email=? and password=?";
+			
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, email);
+			ps.setString(2, password);
+			
+			ResultSet rs =  ps.executeQuery();
+			
+			while(rs.next()) {
+				
+				user = new User();
+				user.setId(rs.getInt(1));
+				user.setEmail(rs.getString(3));
+				user.setPassword(rs.getString(4));
+				user.setFullName(rs.getString(2));
+			}
+
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return user;
 	}
 
 }

@@ -1,7 +1,7 @@
 <%@page import="com.Connection.DBConnection"%>
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" isELIgnored="false"%>
 
 <%@ include file="Bootstrap.jsp"%>
 <!DOCTYPE html>
